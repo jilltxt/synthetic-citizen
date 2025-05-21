@@ -41,7 +41,7 @@ def generate_response(client, prompt: str) -> str:
     )
     return response.choices[0].message.content.strip()
 
-def run_survey_loop(client):
+def main(client):
     """
     Iterates over all gender and county combinations, generating and printing responses.
     """
@@ -60,4 +60,4 @@ def run_survey_loop(client):
 
 if __name__ == "__main__":
     client = get_openai_client()
-    run_survey_loop(client)
+    main(client)
