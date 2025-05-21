@@ -47,9 +47,9 @@ def main(client):
     """
     genders = ["mann", "kvinne"]
     counties = [
-        "Oslo", "Viken", "Vestfold og Telemark", "Agder",
+        "Oslo", "Viken", "Vestfold", "Telemark", "Agder",
         "Rogaland", "Vestland", "Møre og Romsdal",
-        "Trøndelag", "Nordland", "Troms og Finnmark"
+        "Trøndelag", "Nordland", "Troms" , "Finnmark"
     ]
 
     for gender in genders:
