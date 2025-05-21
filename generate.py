@@ -2,6 +2,9 @@ import openai
 import os
 from dotenv import load_dotenv
 
+from data_mapping.get_gender import get_gender
+
+
 def get_openai_client():
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY")
@@ -59,5 +62,9 @@ def main(client):
             print(f"{gender.title()} fra {county}: {response}")
 
 if __name__ == "__main__":
+    gender=get_gender(1)
+    print(gender)
+    exit()
+
     client = get_openai_client()
     main(client)
