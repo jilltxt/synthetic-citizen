@@ -1,22 +1,11 @@
+import openai
 import os
 from dotenv import load_dotenv
-from openai import OpenAI
 
-def load_api_key() -> str:
-    """
-    Loads the OpenAI API key from a .env file.
-    """
+def get_openai_client():
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise ValueError("OPENAI_API_KEY not found in environment variables.")
-    return api_key
-
-def create_openai_client(api_key: str) -> OpenAI:
-    """
-    Creates an OpenAI client using the provided API key.
-    """
-    return OpenAI(api_key=api_key)
+    return openai.OpenAI(api_key=api_key)
 
 def generate_prompt(gender: str, county: str) -> str:
     """
@@ -34,7 +23,7 @@ Se for deg at du er en {gender} fra {county}. Du deltar i en spørreundersøkels
 5 Svært bekymret»
 """
 
-def generate_response(client: OpenAI, prompt: str) -> str:
+def generate_response(client, prompt: str) -> str:
     """
     Generates a response from the OpenAI model for a given prompt.
     """
@@ -52,7 +41,7 @@ def generate_response(client: OpenAI, prompt: str) -> str:
     )
     return response.choices[0].message.content.strip()
 
-def run_survey_loop(client: OpenAI):
+def run_survey_loop(client):
     """
     Iterates over all gender and county combinations, generating and printing responses.
     """
@@ -70,6 +59,5 @@ def run_survey_loop(client: OpenAI):
             print(f"{gender.title()} fra {county}: {response}")
 
 if __name__ == "__main__":
-    api_key = load_api_key()
-    client = create_openai_client(api_key)
+    client = get_openai_client()
     run_survey_loop(client)
