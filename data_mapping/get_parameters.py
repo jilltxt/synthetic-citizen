@@ -38,4 +38,46 @@ def get_age(code):
     """convert the code to the label"""
     return age[code]
 
+# County
+# not needed: countyrange = {}
+county = {
+    3  :  "Oslo ",
+    11 :  "Rogaland ",
+    15 :  "Møre og Romsdal ",
+    18 :  "Nordland ",
+    31 :  "Østfold ",
+    32 :  "Akershus ",
+    33 :  "Buskerud ",
+    34 :  "Innlandet ",
+    39 :  "Vestfold ",
+    40 :  "Telemark ",
+    42 :  "Agder ",
+    46 :  "Vestland ",
+    50 :  "Trøndelag ",
+    55 :  "Troms ",
+    56 :  "Finnmark "
+    }
+
+'''
+Verdi 	Merkelapp 	Enheter 	Prosent 	
+3 	Oslo 	1659 	15.6% 	
+11 	Rogaland 	1027 	9.7% 	
+15 	Møre og Romsdal 	410 	3.9% 	
+18 	Nordland 	392 	3.7% 	
+31 	Østfold 	465 	4.4% 	
+32 	Akershus 	1526 	14.4% 	
+33 	Buskerud 	454 	4.3% 	
+34 	Innlandet 	576 	5.4% 	
+39 	Vestfold 	526 	5.0% 	
+40 	Telemark 	275 	2.6% 	
+42 	Agder 	532 	5.0% 	
+46 	Vestland 	1482 	14.0% 	
+50 	Trøndelag 	885 	8.3% 	
+55 	Troms 	302 	2.8% 	
+56 	Finnmark 	106 	1.0% 	
+'''
+
+def get_county(code):
+    """convert the code to the label"""
+    return county[code]
 
