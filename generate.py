@@ -48,12 +48,6 @@ def main(client):
     """
     Iterates over all gender and county combinations, generating and printing responses.
     """
-    genders = ["mann", "kvinne"]
-    counties = [
-        "Oslo", "Viken", "Vestfold", "Telemark", "Agder",
-        "Rogaland", "Vestland", "Møre og Romsdal",
-        "Trøndelag", "Nordland", "Troms" , "Finnmark"
-    ]
 
     for gender in genders:
         for county in counties:
