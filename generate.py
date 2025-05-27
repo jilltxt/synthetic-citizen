@@ -114,6 +114,7 @@ if __name__ == "__main__":
     demographics = generate_synthetic_citizen()
     print(demographics)
     # prompt = generate_prompt(1,3,3)
+        # some other time we can import demographic profiles from a CSV file here instead
     # print(prompt)
     prompt = generate_prompt(*demographics)
     print(prompt)
