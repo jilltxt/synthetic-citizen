@@ -58,6 +58,7 @@ county = {
     56 :  "Finnmark"
     }
 
+
 '''
 (from Norwegian Citizen Panel codebook:)
 Verdi 	Merkelapp 	Enheter 	Prosent 	
