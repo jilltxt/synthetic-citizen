@@ -16,6 +16,15 @@ def get_openai_client():
 # The second option requires that the function also returns the randomly generated values for the demographics.
 # Also, doing 1) based on real demographics could produce reputational risk for NCP, so we will hold off on that.
 
+def generate_synthetic_citizen() -> dict:
+    """
+    Generates a synthetic citizen with random demographic attributes.
+    in the form of keys
+    """
+    gender_key = random.choice(list(gender.keys()))
+    age_key = random.choice(list(age.keys()))
+    county_key = random.choice(list(county.keys()))
+    return {gender_key
 
 def generate_prompt() -> str:
     """
@@ -24,7 +33,19 @@ def generate_prompt() -> str:
     gender_key = random.choice(list(gender.keys()))
     age_key = random.choice(list(age.keys()))
     county_key = random.choice(list(county.keys()))
-    print(f"Du er en {gender[gender_key]} født i {age[age_key]}. Du bor i {county[county_key]}.")
+    return(f"""
+    Se for deg at du er en {gender[gender_key]} født i {age[age_key]}. Du bor i {county[county_key]}."
+    Du deltar i en spørreundersøkelse. Hva svarer du på følgende spørsmål:
+
+    «Hvor bekymret er du for klimaendringer?
+    
+    1 Ikke bekymret i det hele tatt
+    2 Lite bekymret
+    3 Noe bekymret
+    4 Bekymret
+    5 Svært bekymret»
+# """
+    )
 
 
 #     return f"""
