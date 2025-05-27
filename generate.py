@@ -2,7 +2,7 @@ import openai
 import os
 from dotenv import load_dotenv
 
-from data_mapping.get_gender import get_gender
+from data_mapping.get_gender import get_gender #change to get_parameters when that file is created
 
 
 def get_openai_client():
