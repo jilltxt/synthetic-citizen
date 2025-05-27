@@ -41,21 +41,21 @@ def get_age(code):
 # County
 # not needed: countyrange = {}
 county = {
-    3  :  "Oslo ",
-    11 :  "Rogaland ",
-    15 :  "Møre og Romsdal ",
-    18 :  "Nordland ",
-    31 :  "Østfold ",
-    32 :  "Akershus ",
-    33 :  "Buskerud ",
-    34 :  "Innlandet ",
-    39 :  "Vestfold ",
-    40 :  "Telemark ",
-    42 :  "Agder ",
-    46 :  "Vestland ",
-    50 :  "Trøndelag ",
-    55 :  "Troms ",
-    56 :  "Finnmark "
+    3  :  "Oslo",
+    11 :  "Rogaland",
+    15 :  "Møre og Romsdal",
+    18 :  "Nordland",
+    31 :  "Østfold",
+    32 :  "Akershus",
+    33 :  "Buskerud",
+    34 :  "Innlandet",
+    39 :  "Vestfold",
+    40 :  "Telemark",
+    42 :  "Agder",
+    46 :  "Vestland",
+    50 :  "Trøndelag",
+    55 :  "Troms",
+    56 :  "Finnmark"
     }
 
 '''
