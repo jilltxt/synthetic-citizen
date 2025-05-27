@@ -10,6 +10,13 @@ def get_openai_client():
     api_key = os.getenv("OPENAI_API_KEY")
     return openai.OpenAI(api_key=api_key)
 
+# Discussion on 27 May 2025 about two approaches:
+# 1) Use a matrix of (real or synthetic) demographic variables in combination, produce responses based on that.
+# 2) Generate one random synthetic citizen at a time, produce prompt, return AI-generated responses based on that.
+# The second option requires that the function also returns the randomly generated values for the demographics.
+# Also, doing 1) based on real demographics could produce reputational risk for NCP, so we will hold off on that.
+
+
 def generate_prompt(gender: str, county: str) -> str:
     """
     Generates a survey prompt for a specific gender and county.
