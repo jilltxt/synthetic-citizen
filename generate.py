@@ -1,9 +1,9 @@
 import openai
 import os
 from dotenv import load_dotenv
+import random
 
-from data_mapping.get_gender import get_gender #change to get_parameters when that file is created
-
+from data_mapping.get_parameters import gender, age, county
 
 def get_openai_client():
     load_dotenv()
@@ -17,21 +17,27 @@ def get_openai_client():
 # Also, doing 1) based on real demographics could produce reputational risk for NCP, so we will hold off on that.
 
 
-def generate_prompt(gender: str, county: str) -> str:
+def generate_prompt() -> str:
     """
     Generates a survey prompt for a specific gender and county.
     """
-    return f"""
-Se for deg at du er en {gender} fra {county}. Du deltar i en spørreundersøkelse. Hva svarer du på følgende spørsmål:
+    gender_key = random.choice(list(gender.keys()))
+    age_key = random.choice(list(age.keys()))
+    county_key = random.choice(list(county.keys()))
+    print(f"Du er en {gender[gender_key]} født i {age[age_key]}. Du bor i {county[county_key]}.")
 
-«Hvor bekymret er du for klimaendringer?
 
-1 Ikke bekymret i det hele tatt  
-2 Lite bekymret  
-3 Noe bekymret  
-4 Bekymret  
-5 Svært bekymret»
-"""
+#     return f"""
+# Se for deg at du er en {gender} fra {county}. Du deltar i en spørreundersøkelse. Hva svarer du på følgende spørsmål:
+#
+# «Hvor bekymret er du for klimaendringer?
+#
+# 1 Ikke bekymret i det hele tatt
+# 2 Lite bekymret
+# 3 Noe bekymret
+# 4 Bekymret
+# 5 Svært bekymret»
+# """
 
 def generate_response(client, prompt: str) -> str:
     """
@@ -63,9 +69,11 @@ def main(client):
             print(f"{gender.title()} fra {county}: {response}")
 
 if __name__ == "__main__":
-    gender=get_gender(1)
-    print(gender)
-    exit()
-
-    client = get_openai_client()
-    main(client)
+    prompt = generate_prompt()
+    print(prompt)
+    # gender=get_gender(1)
+    # print(gender)
+    # exit()
+    #
+    # client = get_openai_client()
+    # main(client)
