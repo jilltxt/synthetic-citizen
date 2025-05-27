@@ -112,7 +112,10 @@ def main(client):
 
 if __name__ == "__main__":
     demographics = generate_synthetic_citizen()
-    prompt = generate_prompt(1,3,3)
+    print(demographics)
+    # prompt = generate_prompt(1,3,3)
+    # print(prompt)
+    prompt = generate_prompt(*demographics)
     print(prompt)
     #scitizen = generate_synthetic_citizen()
     #print(scitizen)
