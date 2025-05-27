@@ -59,6 +59,7 @@ county = {
     }
 
 '''
+(from Norwegian Citizen Panel codebook:)
 Verdi 	Merkelapp 	Enheter 	Prosent 	
 3 	Oslo 	1659 	15.6% 	
 11 	Rogaland 	1027 	9.7% 	
