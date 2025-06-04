@@ -2,6 +2,7 @@ import openai
 import os
 from dotenv import load_dotenv
 import random
+import pandas as pd
 import csv
 
 from data_mapping.get_parameters import gender, age, county
@@ -67,68 +68,49 @@ def generate_prompt(gender_key, age_key, county_key) -> str:
             )
 
 
-#     return f"""
-# Se for deg at du er en {gender} fra {county}. Du deltar i en spørreundersøkelse. Hva svarer du på følgende spørsmål:
-#
-# «Hvor bekymret er du for klimaendringer?
-#
-# 1 Ikke bekymret i det hele tatt
-# 2 Lite bekymret
-# 3 Noe bekymret
-# 4 Bekymret
-# 5 Svært bekymret»
-# """
 
-def generate_responses(n_responses) -> str:
-    """
-    Generates a response from the OpenAI model for a given prompt.
-    """
+
+def generate_responses(n_responses):
+    survey_data = []
     client = get_openai_client()
-    survey_responses = []
+
     for i in range(n_responses):
         demographics = generate_synthetic_citizen()
+        gender_key, age_key, county_key = demographics  # unpack
+        print(f"Demographics: {demographics}")  # optional for debugging
 
-        print(f"Demographics: ",demographics)
-        prompt = generate_prompt(*demographics)
-        print(f"Prompt: {prompt}")
-    # create a loop to generate 10 responses
+        prompt = generate_prompt(gender_key, age_key, county_key)
 
         response = client.chat.completions.create(
             model="gpt-4",
             messages=[
-                {
-                    "role": "system",
-                    "content": "Svar kun med tall fra 1 til 5, og ikke noe annet. "
-                },
+                {"role": "system", "content": "Svar kun med tall fra 1 til 5, og ikke noe annet."},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.9,
             max_tokens=150
         )
-        survey_response = response.choices[0].message.content
-        print(f"Survey response: {survey_response}")
-        print("-------------------")
-        # save response to a list item in responses
-        survey_responses.append(survey_response)
-        print("after append: ", survey_responses)
-        # responses.append(response.choices[0].message.content.strip())
-        #complete loop
-    print("Generated response:")
-    print(survey_responses)
+        survey_response = response.choices[0].message.content.strip()
 
-    #return response.choices[0].message.content.strip()
-    return survey_responses
+        survey_data.append({
+            "gender_key": gender_key,
+            "age_key": age_key,
+            "county_key": county_key,
+            "response": survey_response
+        })
+
+    df = pd.DataFrame(survey_data)
+    df.to_csv("survey_results.csv", index=False)
+    print("Saved to survey_results.csv")
+
 
 
 
 if __name__ == "__main__":
-    client = get_openai_client()
-    demographics = generate_synthetic_citizen()
-    print(demographics)
     # prompt = generate_prompt(1,3,3)
         # some other time we can import demographic profiles from a CSV file here instead
     # print(prompt)
-    response = generate_responses(100)
+    response = generate_responses(5)
 
 
 
