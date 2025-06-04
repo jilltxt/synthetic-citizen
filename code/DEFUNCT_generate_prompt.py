@@ -1,6 +1,6 @@
 import random
 
-from data_mapping.get_gender import get_gender #change to get_parameters when that file is created
+from data_mapping.DEFUNCT_get_gender import get_gender #change to get_parameters when that file is created
 
 gender = {
     1: "mann",
