@@ -9,9 +9,9 @@ gender = {
     2: "kvinne"
 }
 
-def get_gender(code):
-    """convert the code to the label"""
-    return gender[code]
+# def get_gender(code):
+#     """convert the code to the label"""
+#     return gender[code]
 
 # prompt: "du er født i ..."
 age = {1: "1945",
