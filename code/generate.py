@@ -75,6 +75,7 @@ def generate_responses(n_responses):
     client = get_openai_client()
 
     for i in range(n_responses):
+        print(f"Iteration # {i}")
         demographics = generate_synthetic_citizen()
         gender_key, age_key, county_key = demographics  # unpack
         print(f"Demographics: {demographics}")  # optional for debugging
@@ -110,7 +111,7 @@ if __name__ == "__main__":
     # prompt = generate_prompt(1,3,3)
         # some other time we can import demographic profiles from a CSV file here instead
     # print(prompt)
-    response = generate_responses(5)
+    response = generate_responses(1000)
 
 
 
