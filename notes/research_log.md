@@ -7,4 +7,5 @@
 - -- Finnes det spørsmål som nesten alle nordmenn er enige i, som mange i USA ikke vil være enige i? Noe med velferdsstaten, helsetjenester, kanskje? Hvis språkmodellen har andre svar på dette enn nordmenn flest så kunne det bety at norske verdier blir påvirket dersom vi bruker disse språkmodellene. 
 - -- Hva mener du om et spesifikt land - det fins noen spørsmål om dette i NCP
 - 
+- We also generated a sample data set with n=1000 (filename: "survey_results.csv"). To do: analyse the data, run regression analysis of climate worry over demographic variables. 
 - 

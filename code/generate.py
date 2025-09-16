@@ -77,7 +77,7 @@ def generate_responses(n_responses):
     for i in range(n_responses):
         print(f"Iteration # {i}")
         demographics = generate_synthetic_citizen()
-        gender_key, age_key, county_key = demographics  # unpack
+        gender_key, age_key, county_key = demographics  # unpack - Do we need this? Inflexible, we could just put "demographics" directly into generate_prompt
         print(f"Demographics: {demographics}")  # optional for debugging
 
         prompt = generate_prompt(gender_key, age_key, county_key)
