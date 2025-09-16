@@ -101,7 +101,7 @@ if __name__ == "__main__":
         # some other time we can import demographic profiles from a CSV file here instead
     # print(prompt)
 
-    # spørsmål uten tall -> svarer stort sett at "som en AI..." og nekter å svarer
+    # spørsmål uten tall -> nekter stort sett å svare - "som en AI..."
     '''    question = """Hvor enig eller uenig er du i påstanden nedenfor?
     Norge har ikke en moralsk plikt til å støtte Ukraina i kampen mot Russland. 
     
