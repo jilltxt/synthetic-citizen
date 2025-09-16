@@ -7,7 +7,6 @@ import csv
 
 from data_mapping.get_parameters import gender, age, county
 
-
 def get_openai_client():
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY")
@@ -53,22 +52,7 @@ def generate_prompt(gender_key, age_key, county_key) -> str:
     # gender_key = random.choice(list(gender.keys()))
     # age_key = random.choice(list(age.keys()))
     # county_key = random.choice(list(county.keys()))
-    return (f"""
-    Se for deg at du er en {gender[gender_key]} født i {age[age_key]}. Du bor i {county[county_key]}."
-    Du deltar i en spørreundersøkelse. Hva svarer du på følgende spørsmål:
-
-    «Hvor bekymret er du for klimaendringer?
-    
-    1 Ikke bekymret i det hele tatt
-    2 Lite bekymret
-    3 Noe bekymret
-    4 Bekymret
-    5 Svært bekymret»
-# """
-            )
-
-
-
+    return (f"Se for deg at du er en {gender[gender_key]} født i {age[age_key]}. Du bor i {county[county_key]}. Du deltar i en spørreundersøkelse. Hva svarer du på følgende spørsmål:\n\n{question}")
 
 def generate_responses(n_responses):
     survey_data = []
@@ -81,17 +65,21 @@ def generate_responses(n_responses):
         print(f"Demographics: {demographics}")  # optional for debugging
 
         prompt = generate_prompt(gender_key, age_key, county_key)
+        print(f"The prompt is: {prompt}")
 
         response = client.chat.completions.create(
             model="gpt-4",
             messages=[
-                {"role": "system", "content": "Svar kun med tall fra 1 til 5, og ikke noe annet."},
+                {"role": "system", "content": ""},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.9,
             max_tokens=150
         )
+        print(f"Response: {response}\n")
+
         survey_response = response.choices[0].message.content.strip()
+        print(f"Stripped response: {survey_response}\n\n\n")
 
         survey_data.append({
             "gender_key": gender_key,
@@ -101,8 +89,9 @@ def generate_responses(n_responses):
         })
 
     df = pd.DataFrame(survey_data)
-    df.to_csv("survey_results.csv", index=False)
+    df.to_csv("data/survey_results.csv", index=False)
     print("Saved to survey_results.csv")
+    print(df)
 
 
 
@@ -111,9 +100,55 @@ if __name__ == "__main__":
     # prompt = generate_prompt(1,3,3)
         # some other time we can import demographic profiles from a CSV file here instead
     # print(prompt)
-    response = generate_responses(1000)
 
+    # spørsmål uten tall -> svarer stort sett at "som en AI..." og nekter å svarer
+    '''    question = """Hvor enig eller uenig er du i påstanden nedenfor?
+    Norge har ikke en moralsk plikt til å støtte Ukraina i kampen mot Russland. 
+    
+    Her er svaralternativene - velg ett:
+    Svært enig
+    Enig
+    Noe enig
+    Verken enig eller uenig
+    Noe uenig
+    Uenig
+    Svært uenig"""
+    '''
 
+    #spørsmål med tall -> svarer 4 på nesten alt
+    '''question = """Hvor enig eller uenig er du i påstanden nedenfor?
+        Norge har ikke en moralsk plikt til å støtte Ukraina i kampen mot Russland. 
+
+        Her er svaralternativene - velg ett:
+        1   Svært enig
+        2   Enig
+        3   Noe enig
+        4   Verken enig eller uenig
+        5   Noe uenig
+        6   Uenig
+        7   Svært uenig"""
+        '''
+
+    '''question =  """«Hvor bekymret er du for klimaendringer?
+
+    1 Ikke bekymret i det hele tatt
+    2 Lite bekymret
+    3 Noe bekymret
+    4 Bekymret
+    5 Svært bekymret»
+    """
+    '''
+
+    question =  """«Hvor bekymret er du for klimaendringer?
+
+    Ikke bekymret i det hele tatt
+    Lite bekymret
+    Noe bekymret
+    Bekymret
+    Svært bekymret»
+    """
+
+    response = generate_responses(10)
 
     #scitizen = generate_synthetic_citizen()
     #print(scitizen)
