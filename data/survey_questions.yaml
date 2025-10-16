@@ -1,0 +1,117 @@
+- id: Q01
+  text: |
+    Norge har en moralsk plikt til å støtte Ukraina i kampen mot Russland.
+    Velg ett svar:
+    1 Svært enig
+    2 Enig
+    3 Noe enig
+    4 Verken enig eller uenig
+    5 Noe uenig
+    6 Uenig
+    7 Svært uenig
+
+- id: Q02
+  text: |
+    Norge har ikke en moralsk plikt til å støtte Ukraina i kampen mot Russland.
+    Velg ett svar:
+    1 Svært enig
+    2 Enig
+    3 Noe enig
+    4 Verken enig eller uenig
+    5 Noe uenig
+    6 Uenig
+    7 Svært uenig
+
+- id: Q03
+  text: |
+    Hvor bekymret er du for klimaendringer?
+    Velg ett svar:
+    1 Ikke bekymret i det hele tatt
+    2 Lite bekymret
+    3 Noe bekymret
+    4 Bekymret
+    5 Svært bekymret
+
+- id: Q04
+  text: |
+    Når det gjelder klimaendringer, hvor sterkt opplever du følgende følelser?
+    Apati
+    Velg ett svar:
+    1 Ikke i det hele tatt
+    2 Lite
+    3 Noe
+    4 Sterkt
+    5 Svært sterkt
+
+- id: Q05
+  text: |
+    Teknologiske nyvinninger kommer til å løse klimaproblemene.
+    Velg ett svar:
+    1 Svært enig
+    2 Enig
+    3 Noe enig
+    4 Verken enig eller uenig
+    5 Noe uenig
+    6 Uenig
+    7 Svært uenig
+
+- id: Q06
+  text: |
+    Hva er de viktigste politiske sakene eller saksfeltene for deg personlig?
+    Vennligst list de tre viktigste sakene der 1 er den viktigste, 
+    2 er den nest viktigste og 3 er den tredje viktigste saken.
+
+- id: Q07
+  text: |
+    Diskriminering mot kvinner er ikke lenger et problem i Norge.
+    Velg ett svar:
+    1 Svært enig
+    2 Enig
+    3 Noe enig
+    4 Verken enig eller uenig
+    5 Noe uenig
+    6 Uenig
+    7 Svært uenig
+
+- id: Q08
+  text: |
+    Om en person er mann eller kvinne avhenger av om personen føler seg som mann eller kvinne.
+    Velg ett svar:
+    1 Svært enig
+    2 Enig
+    3 Noe enig
+    4 Verken enig eller uenig
+    5 Noe uenig
+    6 Uenig
+    7 Svært uenig
+
+- id: Q09
+  text: |
+    Du har et barn i barnehage. Personalet oppfyller de formelle kravene til utdannelse, 
+    men barnehagen er litt langt unna hjemmet.
+    Påstand: Jeg ville begrenset tiden barnet mitt var i barnehagen.
+    Velg ett svar (0–10):
+    0 Helt uenig
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10 Helt enig
+
+- id: Q10
+  text: |
+    Den offentlige forvaltningen kan i framtiden bruke kunstig intelligens 
+    for å hjelpe med å ta beslutninger i enkelte saker (f.eks. forutsi sykmeldingslengde,
+    bosette flyktninger, vurdere prøveløslatelse).
+    Hvor bekymret er du for bruk av maskinlæring og kunstig intelligens i offentlig forvaltning?
+    Velg ett svar:
+    1 Ikke bekymret i det hele tatt
+    2 Lite bekymret
+    3 Noe bekymret
+    4 Bekymret
+    5 Svært bekymret
