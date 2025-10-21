@@ -109,6 +109,7 @@ county = {
     }
 
 
+
 '''
 (from Norwegian Citizen Panel codebook:)
 Verdi 	Merkelapp 	Enheter 	Prosent 	
