@@ -36,12 +36,12 @@ def generate_responses(n_responses, questionnaire_keys):
     client = get_openai_client()
 
     # Load questions
-    p = Path('../data/survey_questions.yaml')
+    p = Path('data/survey_questions.yaml')
     with p.open("r", encoding="utf-8") as f:
         questionnaire_list = yaml.safe_load(f)
 
     # Load synthetic citizens
-    synthetic_citizens = pd.read_csv("random_sample.csv")
+    synthetic_citizens = pd.read_csv("code/random_sample.csv")
 
     for i in range(n_responses):
         print(f"Iteration # {i}")
@@ -115,7 +115,7 @@ def generate_responses(n_responses, questionnaire_keys):
     model_tag = MODEL.replace("/", "_").replace(":", "_")
     temp_tag = f"t{TEMP}".replace(".", "_")
 
-    out_dir = Path("../data")
+    out_dir = Path("data")
     long_path = out_dir / f"survey_results_long_{date_tag}_{model_tag}_{temp_tag}.csv"
     df_long.to_csv(long_path, index=False)
     print(f"Saved long to '{long_path}'")
