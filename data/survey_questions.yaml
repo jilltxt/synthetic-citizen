@@ -73,7 +73,7 @@
     6 Uenig
     7 Svært uenig
 
-- id: Q08
+- id: trans
   text: |
     Om en person er mann eller kvinne avhenger av om personen føler seg som mann eller kvinne.
     Velg ett svar:
@@ -85,7 +85,7 @@
     6 Uenig
     7 Svært uenig
 
-- id: Q09
+- id: barnehage_tid
   text: |
     Du har et barn i barnehage. Personalet oppfyller de formelle kravene til utdannelse, 
     men barnehagen er litt langt unna hjemmet.
