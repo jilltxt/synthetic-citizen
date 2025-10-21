@@ -1,4 +1,4 @@
-- id: Q01
+- id: ukr_support
   text: |
     Norge har en moralsk plikt til å støtte Ukraina i kampen mot Russland.
     Velg ett svar:
@@ -10,7 +10,7 @@
     6 Uenig
     7 Svært uenig
 
-- id: Q02
+- id: ukr_notsupport
   text: |
     Norge har ikke en moralsk plikt til å støtte Ukraina i kampen mot Russland.
     Velg ett svar:
@@ -22,7 +22,7 @@
     6 Uenig
     7 Svært uenig
 
-- id: Q03
+- id: clim_worry
   text: |
     Hvor bekymret er du for klimaendringer?
     Velg ett svar:
@@ -32,7 +32,7 @@
     4 Bekymret
     5 Svært bekymret
 
-- id: Q04
+- id: clim_apathy
   text: |
     Når det gjelder klimaendringer, hvor sterkt opplever du følgende følelser?
     Apati
@@ -43,7 +43,7 @@
     4 Sterkt
     5 Svært sterkt
 
-- id: Q05
+- id: clim_techopimist
   text: |
     Teknologiske nyvinninger kommer til å løse klimaproblemene.
     Velg ett svar:
@@ -55,13 +55,13 @@
     6 Uenig
     7 Svært uenig
 
-- id: Q06
+- id: hjertesak
   text: |
     Hva er de viktigste politiske sakene eller saksfeltene for deg personlig?
     Vennligst list de tre viktigste sakene der 1 er den viktigste, 
     2 er den nest viktigste og 3 er den tredje viktigste saken.
 
-- id: Q07
+- id: gender_disc
   text: |
     Diskriminering mot kvinner er ikke lenger et problem i Norge.
     Velg ett svar:
@@ -103,7 +103,7 @@
     9
     10 Helt enig
 
-- id: Q10
+- id: ai_publicsector
   text: |
     Den offentlige forvaltningen kan i framtiden bruke kunstig intelligens 
     for å hjelpe med å ta beslutninger i enkelte saker (f.eks. forutsi sykmeldingslengde,
