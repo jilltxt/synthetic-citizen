@@ -142,5 +142,5 @@ def generate_responses(n_responses, questionnaire_keys):
 
 if __name__ == "__main__":
 
-    questionnaire = ['ukr_support', 'clim_worry', 'gender_disc']
-    generate_responses(3, questionnaire)
+    questionnaire = ['clim_worry', 'clim_techoptimist', 'clim_apathy', 'gender_disc', 'ukr_support', ]
+    generate_responses(2000, questionnaire)
