@@ -30,7 +30,7 @@ def generate_identity_prompt(demographics) -> str:
     return (f"Du er en {gender[demographics['gender']]} født i {age[demographics['age']]} og du "
             f"bor i {county[demographics['county']]}. Du har utdanning fra {edu[demographics['edu']]}, "
             f"og er yrkesmessig tilknyttet {occupation[demographics['occupation']]}. "
-            "Du deltar i en spørreundersøkelse. Du skal kun svare med et tall nar du far sporsmalene. Svar forstatt nå.")
+            "Du deltar i en spørreundersøkelse. Du skal kun svare med et tall når du far sporsmålene.")
 
 def generate_responses(n_responses, questionnaire_keys):
     survey_data = []
