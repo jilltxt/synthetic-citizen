@@ -1,5 +1,6 @@
 - id: ukr_support
   text: |
+    Hvor enig eller uenig er du i påstanden nedenfor? 
     Norge har en moralsk plikt til å støtte Ukraina i kampen mot Russland.
     Velg ett svar:
     1 Svært enig
@@ -12,6 +13,7 @@
 
 - id: ukr_notsupport
   text: |
+    Hvor enig eller uenig er du i påstanden nedenfor? 
     Norge har ikke en moralsk plikt til å støtte Ukraina i kampen mot Russland.
     Velg ett svar:
     1 Svært enig
@@ -115,3 +117,50 @@
     3 Noe bekymret
     4 Bekymret
     5 Svært bekymret
+
+- id: ML_improve_public #r26k2_dmaip
+  text: |
+    Den offentlige forvaltningen bruker i enkelte tilfeller maskinlæring.
+    Maskinlæring kan brukes både for å helautomatisere enkelte oppgaver og for å 
+    bidra med informasjon eller forslag til beslutningstakere. Basert på det du vet, 
+    tror du norske myndigheters bruk av maskinlæring og kunstig intelligens vil føre 
+    til en forbedring eller forverring av offentlige tjenester?
+    1 Svært stor forbedring
+    2 Forbedring
+    3 Noe forbedring
+    4 Verken forbedring eller forverry
+    5 Noe forverring
+    6 Forverring
+    7 Svært sterk forverring
+    8 Vet ikke
+
+- id: climate_threat #eips2018c
+  text: |
+    I hvilken grad opplever du klimaendringene som en trussel?
+    1 Ingen trussel i det hele tatt
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11 Ekstrem trussel
+
+- id: climate_personal
+  text: |
+    I hvilken grad opplever du klimaendringene som en trussel for deg personlig?
+    1 Ingen trussel i det hele tatt
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11 Ekstrem trussel
+    
