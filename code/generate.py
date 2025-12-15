@@ -171,6 +171,10 @@ def generate_responses(n_responses, questionnaire_keys):
 if __name__ == "__main__":
 
     #questionnaire = ['climate_threat', 'ukr_notsupport', 'climate_threat'] #../data/survey_results_wide_2025-12-09T07-57-38_gpt-4o-mini_t0_9.csv
-    questionnaire = ['climate_personal', 'ukr_support']
+    #questionnaire = ['climate_personal', 'ukr_support']
+    questionnaire = ['distrikt-mer']
+    #questionnaire = ['distrikt-ikke-mer']
+    #questionnaire = ['valg-ikke-fri-forby']
+    #questionnaire = ['valg-ikke-fri-tillate']
     generate_responses(2000, questionnaire)
 
