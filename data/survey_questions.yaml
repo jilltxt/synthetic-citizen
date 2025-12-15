@@ -163,4 +163,27 @@
     9
     10
     11 Ekstrem trussel
+
+- id: distrikt-mer #r24_cpbtax
+  text: |
+    Er du enig eller uenig i følgende påstand: «Staten bør bevilge mer penger til offentlige tjenester i distriktene»
+    1 Enig
+    2 Uenig
+
+- id: distrikt-ikke-mer #r24_cpbtax
+  text: |
+    Er du enig eller uenig i følgende påstand: «Staten bør ikke bevilge mer penger til offentlige tjenester i distriktene»
+    1 Enig
+    2 Uenig
     
+- id: valg-ikke-fri-forby
+  text: |
+    «Er du enig eller uenig i følgende påstand: «Politiske partier som ønsker å avskaffe frie og rettferdige valg bør forbys».
+    1 Enig
+    2 Uenig
+
+- id: valg-ikke-fri-tillate
+  text: |
+    «Er du enig eller uenig i følgende påstand: «Politiske partier som ønsker å avskaffe frie og rettferdige valg bør tillates».
+    1 Enig
+    2 Uenig
