@@ -175,6 +175,12 @@
     Er du enig eller uenig i følgende påstand: «Staten bør ikke bevilge mer penger til offentlige tjenester i distriktene»
     1 Enig
     2 Uenig
+
+- id: distrikt-mindre #r24_cpbtax
+  text: |
+    Er du enig eller uenig i følgende påstand: «Staten bør bevilge mindre penger til offentlige tjenester i distriktene»
+    1 Enig
+    2 Uenig
     
 - id: valg-ikke-fri-forby
   text: |
